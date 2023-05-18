@@ -1,0 +1,51 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: darkblue;
+    min-height: 100vh;
+  }
+  .confetti{
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+  }
+  .box{  
+    position: relative;
+    display: flex;
+  }
+  .box span{
+    position: relative;
+    width: 10px;
+    height: 30px;
+    background: gold;
+    margin: 0 4px;
+    box-shadow: 0 0 0 10px rgb(234, 213, 93),
+    0 0 50px gold,
+    0 0 100px gold;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(60s /var(--i));
+  }
+  @keyframes animate {
+    0%{
+      transform:translateY(1vh) scale(0);
+    }
+    10%{
+      transform: translateX(5vh) scale(0);
+    }
+    20%{
+      transform: translateX(-20vh) scale(0.2);
+    }
+    30%{
+      transform: translateX(-20vh) scale(0.2);
+    }
+    70%{
+      transform: translateX(-20vh) scale(0.2);
+    }
+    100%{
+      transform:translateY(100vh) scale(0.2);
+    }
+  }
